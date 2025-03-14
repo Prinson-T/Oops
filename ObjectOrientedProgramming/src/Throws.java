@@ -10,7 +10,13 @@ public class Throws {
         }
     }
     public static void main(String[] args) {
-
+        Throws th=new Throws();
+        try {
+            th.product(220);
+        }catch (InvalidException ex){
+            System.out.println("Caught the exception");
+            System.out.println(ex.getMessage());
+        }
 
     }
 }
