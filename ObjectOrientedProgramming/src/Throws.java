@@ -1,24 +1,16 @@
-class InvalidProductException extends java.lang.Exception{
-    public InvalidProductException(String s){
-        super(s);
-    }
-}
-class Example{
-    void productCheck(int weight)throws InvalidProductException{
-        if (weight<100){
-            throw new InvalidProductException("product invalid");
-        }
+class InvalidException extends Exception{
+    public InvalidException(String message){
+        super(message);
     }
 }
 public class Throws {
-    public static void main(String[] args) {
-        Example g=new Example();
-        try {
-            g.productCheck(60);
-        }catch (InvalidProductException es){
-            System.out.println("Caught the exception");
-            System.out.println(es.getMessage());
+    void product(int weight)throws InvalidException{
+        if (weight<100){
+            throw new InvalidException("product invalid");
         }
+    }
+    public static void main(String[] args) {
+
 
     }
 }
