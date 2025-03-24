@@ -12,7 +12,7 @@ public class JavaThrows {
     public static void main(String[] args) {
         JavaThrows obj=new JavaThrows();
         try {
-            obj.positive(-10);
+            obj.positive(10);
         }catch (inter px){
             System.out.println("Caught the exception");
             System.out.println(px.getMessage());
